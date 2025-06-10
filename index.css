@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -80,38 +84,117 @@ main {
   color: black;
 }
 
-.story-wrapper{
+.story-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding:100px 70px;
+  padding: 100px 70px;
   gap: 20px;
 }
 
-.story-container{
+.story-container {
   padding-right: 50px;
 }
 
-.story-container .title{
+.story-container .title {
   font-size: 10px;
   margin-bottom: 0;
 }
 
-.story-container h3{
+.story-container h3 {
   margin-top: 2px;
   font-size: 40px;
   font-weight: bold;
 }
 
-.story-container p{
+.story-container p {
   font-size: 15px;
 }
-.image-container img{
+.image-container img {
   width: 100%;
 }
 
-@media(max-width:768px){
-  .story-wrapper{
-   display: flex;
-   flex-wrap: wrap-reverse;
+@media (max-width: 768px) {
+  .story-wrapper {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+}
+
+.chef-wrapper {
+  background-color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px 100px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chef-container .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-chef-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 0px 100px 0px;
+}
+
+.card-chef {
+  aspect-ratio: 2 / 3;
+  width: 400px;
+  height: auto;
+}
+
+.card-chef img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-bottom: 20px;
+}
+
+.card-chef p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-wrapper {
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.menu-wrapper .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.menu img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+  .menu-container .menu {
+    display: flex;
+    justify-content: center;
   }
 }
