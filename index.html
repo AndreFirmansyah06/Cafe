@@ -8,24 +8,22 @@
   </head>
   <body>
     <div class="grid-container">
-      <!-- <header>
-        <div class="header">
-          <div class="logo">
-            <a href="">Eatery.Cafe</a>
-          </div>
-          <div class="navigation">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Chef</a>
-            <a href="">Menu</a>
-            <a href="">Contact</a>
-          </div>
-          <div class="reserve-table">
-            <a href="">Call Now 1234567890</a>
-            <a href="">Reserve a table</a>
-          </div>
+      <header id="navbar">
+        <div class="logo">
+          <a href="">Eatery.Cafe</a>
         </div>
-      </header> -->
+        <nav class="navigation">
+          <a href="#home">Home</a>
+          <a href="#story">About</a>
+          <a href="#chef">Chef</a>
+          <a href="#our-menu">Menu</a>
+          <a href="#contact-us">Contact</a>
+        </nav>
+        <div class="reserve-table">
+          <a href="">Call Now 1234567890</a>
+          <a class="btn-reserve-table" href="">Reserve a table</a>
+        </div>
+      </header>
       <main>
         <section id="home">
           <div class="home-wrapper">
@@ -76,13 +74,13 @@
                   <p>kitchen officer</p>
                 </div>
                 <div class="card-chef">
-                  <img src="images/team-image1.jpg" alt="" />
-                  <p>new catherine</p>
+                  <img src="images/team-image2.jpg" alt="" />
+                  <p>lindsay perlen</p>
                   <p>kitchen officer</p>
                 </div>
                 <div class="card-chef">
-                  <img src="images/team-image1.jpg" alt="" />
-                  <p>new catherine</p>
+                  <img src="images/team-image3.jpg" alt="" />
+                  <p>isabella grace</p>
                   <p>kitchen officer</p>
                 </div>
               </div>
@@ -100,19 +98,19 @@
                 <img src="images/menu-image1.jpg" alt="" />
               </div>
               <div class="menu">
-                <img src="images/menu-image1.jpg" alt="" />
+                <img src="images/menu-image2.jpg" alt="" />
               </div>
               <div class="menu">
-                <img src="images/menu-image1.jpg" alt="" />
+                <img src="images/menu-image3.jpg" alt="" />
               </div>
               <div class="menu">
-                <img src="images/menu-image1.jpg" alt="" />
+                <img src="images/menu-image4.jpg" alt="" />
               </div>
               <div class="menu">
-                <img src="images/menu-image1.jpg" alt="" />
+                <img src="images/menu-image5.jpg" alt="" />
               </div>
               <div class="menu">
-                <img src="images/menu-image1.jpg" alt="" />
+                <img src="images/menu-image6.jpg" alt="" />
               </div>
             </div>
           </div>
@@ -136,27 +134,36 @@
         <section id="contact-us">
           <div class="contact-us-wrapper">
             <div class="contact-us-container">
-              <div class="maps">ini maps</div>
+              <div class="maps">
+                <img
+                  src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </div>
             </div>
             <div class="form-contact">
               <h3>contact us</h3>
               <div class="form-sejajar">
-                <input type="text" name="fullname" placeholder="fullname" />
+                <input type="text" name="fullname" placeholder="Full Name" />
                 <input
                   class="email"
                   type="email"
                   name="email"
-                  placeholder="email address"
+                  placeholder="Email Address"
                 />
               </div>
-              <input type="text" name="subject" placeholder="subject" />
               <input
                 type="text"
-                name="text"
-                placeholder="tell about your project"
+                class="subject"
+                name="subject"
+                placeholder="Subject"
               />
+              <textarea
+                class="project"
+                placeholder="Tell about your Project"
+              ></textarea>
               <div class="btn-send">
-                <button class="btn-submit">send message</button>
+                <button class="btn-submit">Send Message</button>
               </div>
             </div>
           </div>
@@ -165,25 +172,21 @@
       <footer>
         <div class="footer-wrapper">
           <div class="footer-container">
-            <div class="kotak">
+            <div class="find-us-box">
               <h3>find us</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Excepturi, voluptatum, reiciendis placeat debitis eligendi
-                ratione pariatur neque porro nisi nam ad. Sit nobis eum sunt
-                facere? Quam recusandae nulla iure?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Tempora voluptatibus quis
               </p>
             </div>
-            <div class="kotak">
+            <div class="reservation-box">
               <h3>reservation</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Tempora voluptatibus quis voluptates debitis ab aliquid enim
-                delectus perspiciatis veniam deserunt esse adipisci soluta
-                expedita, sit fugit vitae, aliquam labore eius?
+                Tempora voluptatibus quis
               </p>
             </div>
-            <div class="kotak">
+            <div class="open-box">
               <h3>open hours</h3>
               <p>monday :closed</p>
               <p>tuesday to friday</p>
@@ -191,13 +194,42 @@
               <p>saturday to sunday</p>
               <p>11.00 AM - 10.00 PM</p>
             </div>
-            <div class="kotak">
-              <p>copyright@2018</p>
+            <div class="copyright-box">
+              <div class="icon">
+                <img
+                  src="https://img.icons8.com/?size=100&id=6Fsj3rv2DCmG&format=png&color=000000"
+                  alt=""
+                />
+                <img
+                  src="https://img.icons8.com/?size=100&id=118466&format=png&color=000000"
+                  alt=""
+                />
+                <img
+                  src="https://img.icons8.com/?size=100&id=59813&format=png&color=000000"
+                  alt=""
+                />
+                <img
+                  src="https://img.icons8.com/?size=100&id=17950&format=png&color=000000"
+                  alt=""
+                />
+              </div>
+              <p>copyright@2025</p>
               <p>eatery.cafe</p>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    <script>
+      const navbar = document.getElementById("navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 545) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
