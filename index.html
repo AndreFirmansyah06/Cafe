@@ -10,19 +10,45 @@
     <div class="grid-container">
       <header id="navbar">
         <div class="logo">
-          <a href="">Eatery.Cafe</a>
+          <a href="#home">Eatery.Cafe</a>
         </div>
-        <nav class="navigation">
-          <a href="#home">Home</a>
-          <a href="#story">About</a>
-          <a href="#chef">Chef</a>
-          <a href="#our-menu">Menu</a>
-          <a href="#contact-us">Contact</a>
+        <nav class="navigation" id="options">
+          <ul class="navbar-fixed">
+            <li id="fix-nav"><a href="#home" ">Home</a></li>
+            <li id="fix-nav"><a href="#story" ">About</a></li>
+            <li id="fix-nav"><a href="#chef" ">Chef</a></li>
+            <li id="fix-nav"><a href="#our-menu" ">Menu</a></li>
+            <li id="fix-nav"><a href="#contact-us" ">Contact</a></li>
+            <li onclick="toggleMenu()" class="show">
+              <a href="javascript:void(0)"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e3e3e3"
+                  id="show"
+                >
+                  <path
+                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  /></svg></a>
+            </li>
+          </ul>
         </nav>
         <div class="reserve-table">
-          <a href="">Call Now 1234567890</a>
-          <a class="btn-reserve-table" href="">Reserve a table</a>
+          <a href="" id="fix-nav">Call Now 1234567890</a>
+          <a class="btn-reserve-table" id="fix-nav" href="">Reserve a table</a>
         </div>
+        <ul class="responsive-navbar" id="responsive-navbar">
+         
+          <li><a href="#home" onclick="hideMenu()">Home</a></li>
+          <li><a href="#story" onclick="hideMenu()" onclick="hideMenu()">About</a></li>
+          <li><a href="#chef" onclick="hideMenu()">Chef</a></li>
+          <li><a href="#our-menu" onclick="hideMenu()">Menu</a></li>
+          <li><a href="#contact-us" onclick="hideMenu()">Contact</a></li>
+          <li><a href="">Call Now 1234567890</a></li>
+          <li><a class="btn-reserve-table" href="">Reserve a table</a></li>
+        </ul>
       </header>
       <main>
         <section id="home">
@@ -221,8 +247,6 @@
       </footer>
     </div>
     <script>
-      const navbar = document.getElementById("navbar");
-
       window.addEventListener("scroll", () => {
         if (window.scrollY > 545) {
           navbar.classList.add("scrolled");
@@ -230,6 +254,17 @@
           navbar.classList.remove("scrolled");
         }
       });
+
+      function toggleMenu(event) {
+        <!-- event.preventDefault(); // hindari reload atau blink -->
+        const nav = document.getElementById("responsive-navbar");
+        nav.classList.toggle("show");
+      }
+    
+      function hideMenu() {
+        const nav = document.getElementById("responsive-navbar");
+        nav.classList.remove("show");
+      }
     </script>
   </body>
 </html>

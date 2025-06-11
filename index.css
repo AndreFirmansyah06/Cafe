@@ -17,14 +17,6 @@ body {
     "footer footer";
 }
 
-/* header {
-  background-image: url("images/slider-image1.jpg");
-  position: relative;
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-} */
-
 header {
   position: fixed;
   top: 0;
@@ -33,7 +25,7 @@ header {
   z-index: 1000;
 
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr;
   padding: 30px 20px;
   background-color: transparent;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -49,25 +41,112 @@ header a {
   text-decoration: none;
 }
 
-.logo {
-  justify-self: flex-start;
+#navbar{
+  margin: 0;
+  padding: 0px 20px;
 }
 
-.navigation {
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 20px;
+}
+
+.navbar-fixed {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
+
+.navbar-fixed li {
+  list-style-type: none;
+}
 .reserve-table {
   display: flex;
-  gap: 10px;
-  padding-right: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.reserve-table span {
+  width: fit-content;
+  color: white;
+  font-size: 15px;
 }
 
 .btn-reserve-table {
   background-color: #f23838;
-  padding: 10px 20px;
+  padding: 5px 20px;
   margin: 0;
+  width: fit-content;
+  text-align: center;
+}
+
+.show {
+  display: none;
+}
+
+.logo a:hover {
+  background-color: #f23838;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+#fix-nav a:hover {
+  background-color: #f23838;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+
+.reserve-table a:hover {
+  background-color: #f23838;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+}
+/* Navbar Responsive */
+
+.responsive-navbar {
+  position: fixed;
+  top: 0;
+  height: fit-content;
+  width: 100%;
+  z-index: 999;
+  background-image: url("images/slider-image3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.responsive-navbar li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.responsive-navbar li:hover {
+  border-radius: 10px;
+  width: 50%;
+  background-color: #f23838;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-reserve-table:hover {
+  background-color: transparent;
 }
 
 main {
@@ -408,6 +487,11 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
   .footer-container {
     grid-template-columns: 1fr;
   }
@@ -455,5 +539,26 @@ textarea::placeholder {
 
   .icon img {
     width: 30px;
+  }
+}
+
+@media (max-width: 945px) {
+  #fix-nav {
+    display: none;
+  }
+
+  .show {
+    padding: 20px;
+    display: flex;
+  }
+
+  .navbar-fixed {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar{
+    display: flex;
+    align-items: flex-start;
   }
 }
