@@ -41,7 +41,7 @@ header a {
   text-decoration: none;
 }
 
-#navbar{
+#navbar {
   margin: 0;
   padding: 0px 20px;
 }
@@ -487,10 +487,6 @@ textarea::placeholder {
 }
 
 @media (max-width: 768px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
 
   .footer-container {
     grid-template-columns: 1fr;
@@ -525,7 +521,6 @@ textarea::placeholder {
   .open-box,
   .copyright-box {
     text-align: center;
-    width: 100%;
     background-color: #f2f3f5;
   }
 
@@ -557,7 +552,7 @@ textarea::placeholder {
     justify-content: flex-end;
   }
 
-  .navbar{
+  .navbar {
     display: flex;
     align-items: flex-start;
   }
